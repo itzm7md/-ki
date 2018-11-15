@@ -13,7 +13,15 @@ if (message.content.startsWith(adminprefix + 'play')) {
 if (message.content.startsWith(adminprefix + 'stream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/faresgameryt");
     message.channel.sendMessage(`**تم تغير الستريمنق  ${argresult}**`)
-}
+} else
+	if (message.content.startsWith(${prefix}+ 'wh')) {
+  client.user.setActivity(argresult, {type: "WATCHING"});
+    message.channel.sendMessage(`**${argresult} تم تغير الواتشنق **`)
+	}else 
+		if (message.content.startsWith(${prefix}+ 'l')) {
+  client.user.setActivity(argresult, {type: "LISTENING"});
+message.channel.sendMessage(`**${argresult} تم تغير اللسننق **`)
+			
 client.on('message', message => {//restart
     if(message.content === adminprefix + "restart") {
           if (!devs.includes(message.author.id)) return;
