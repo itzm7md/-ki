@@ -27,7 +27,7 @@ client.on('message', message => {//restart
           if (!devs.includes(message.author.id)) return;
               message.channel.send(`⚠️ **الشخص الذي اعاد تشغيل البوت ${message.author.username}**`);
             console.log(`⚠️ جاري اعادة تشغيل البوت... ⚠️`);
-            Rocket.destroy();s
+            client.destroy();s
             child_process.fork(__dirname + "/bot.js");
             console.log(`تم اعادة تشغيل البوت`);
         }
