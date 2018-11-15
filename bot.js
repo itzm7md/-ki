@@ -14,11 +14,11 @@ if (message.content.startsWith(adminprefix + 'stream')) {
   client.user.setGame(argresult, "https://www.twitch.tv/faresgameryt");
     message.channel.sendMessage(`**تم تغير الستريمنق  ${argresult}**`)
 } else
-	if (message.content.startsWith(${prefix}+ 'wh')) {
+	if (message.content.startsWith(adminprefix+ 'wh')) {
   client.user.setActivity(argresult, {type: "WATCHING"});
     message.channel.sendMessage(`**${argresult} تم تغير الواتشنق **`)
 	}else 
-		if (message.content.startsWith(${prefix}+ 'l')) {
+		if (message.content.startsWith(adminprefix+ 'l')) {
   client.user.setActivity(argresult, {type: "LISTENING"});
 message.channel.sendMessage(`**${argresult} تم تغير اللسننق **`)
 			
