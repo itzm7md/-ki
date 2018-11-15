@@ -2,7 +2,7 @@
 const client = new Discord.Client();
 	 const adminprefix = "#";
 const devs = ['405795595450712081' , '472573894323077150' , '431474404007084035'];
-client.on('message', message => {//for dev
+client.on('message', message => {
   var argresult = message.content.split(` `).slice(1).join(' ');
     if (!devs.includes(message.author.id)) return;
 
@@ -21,7 +21,7 @@ if (message.content.startsWith(adminprefix + 'stream')) {
 		if (message.content.startsWith(adminprefix+ 'l')) {
   client.user.setActivity(argresult, {type: "LISTENING"});
 message.channel.sendMessage(`**${argresult} تم تغير اللسننق **`)
-			
+		}
 client.on('message', message => {//restart
     if(message.content === adminprefix + "restart") {
           if (!devs.includes(message.author.id)) return;
